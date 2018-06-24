@@ -1,0 +1,50 @@
+#spielerbild{
+    border-radius: 5%;
+    float: none;
+    height: 30rem;
+    width: 40rem;
+
+}
+header{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'sans-serif';
+    color: white;
+    text-shadow: 0 0 22px black;
+}
+.spieler{
+    text-align: center;
+    
+    color: rgb(243, 232, 232);
+    text-shadow: 0 0 16px black;
+    font-family: sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+   
+}
+
+body{
+    background-image: url("fifa18.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    width: 100%;
+    height: auto;
+    
+}
+#dfbLogo{
+    float: right;
+}
+img{
+    display: inline-block;
+}
+h3{
+    text-decoration: underline ;
+}
+.spielerValue{
+    color:white;
+}
+#link:hover{
+    color: white;
+    
+}
