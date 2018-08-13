@@ -39,3 +39,7 @@ $.ajax({
     $( ".witz" ).html( "<strong>" + result + "</strong> degrees" );
   }
 });
+
+var exports = module.exports = {};
+exports.loadDoc = loadDoc;
+exports.ajax = ajax;

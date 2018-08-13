@@ -6,18 +6,18 @@
     <title>Deutschland unsere Spieler</title>                                   <!--HEAD von VSC teils selbst erstellt -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
 </head>
 <body>
     <header>Deutschland unsere Spieler</header> 
     <div>
-        <button type="button" onclick="logout()">Logout</button>
+        <a id="logout" href="http://localhost:3000/logout">Logout</a>
             
         </div>
 
     <div>
 <div class=spieler>
-    <button id="clickMe" type="button" onclick="ajax()">Erzähl mir einen Witz</button>
+    <button id="clickMe" type="button" onclick="loadDoc()">Erzähl mir einen Witz</button>
 
 <p id="witz"></p>
 <figure>

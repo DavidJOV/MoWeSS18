@@ -3,6 +3,7 @@ var express = require('express'),
     session = require('express-session');
     path = require("path");
     var request = require('request');
+    //var main =require("/main.js");
     
 app.use(session({
     secret: '2C44-4D44-WppQ38S',
@@ -15,7 +16,8 @@ var auth = function(req, res, next) {
   if (req.session && req.session.user === "Max" && req.session.admin)
     return next();
   else
-    return res.sendStatus(401);
+  return res.sendFile(__dirname+"/notAuth.html")
+    
 };
  
 // Login endpoint
@@ -47,11 +49,15 @@ app.get('/logout', function (req, res) {
  
 // Get content endpoint
 app.get('/index', auth, function (req, res) {
+  
     res.sendFile(__dirname+"/index.html");
-    
 });
  
 app.listen(3000);
 app.use(express.static("public"))
 console.log("app running at http://localhost:3000");
+
+
+
+
 
