@@ -11,6 +11,16 @@ function loadDoc() {
   xhttp.open("GET", "witz.json", true);
   xhttp.send();
 }
+ function calculate(){
+     x= document.getElementById("op1").value;
+     y= document.getElementById("op2").value;
+     z = +x + +y;
+     
+
+     alert("Das Ergebnis lautet " + z);
+ }
+
+
 /*
 function ajax(){
     console.log(22)

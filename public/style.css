@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+#addition{
+    border-radius: 5%;
+
+}
 
 #spielerbild{
     border-radius: 5%;
@@ -11,7 +15,7 @@
 }
 header{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'sans-serif';
     color: white;
     text-shadow: 0 0 22px black;
