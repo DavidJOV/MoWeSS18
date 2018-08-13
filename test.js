@@ -2,6 +2,8 @@ var express = require('express'),
     app = express(),
     session = require('express-session');
     path = require("path");
+    var request = require('request');
+    
 app.use(session({
     secret: '2C44-4D44-WppQ38S',
     resave: true,
@@ -18,13 +20,21 @@ var auth = function(req, res, next) {
  
 // Login endpoint
 app.get('/login', function (req, res) {
+  console.log("1")
   if (!req.query.username || !req.query.password) {
     res.sendFile(__dirname+"/login.html");
+  console.log("2")
+
        
-  } else if(req.query.username === "Max" || req.query.password === "123") {
+  } else if(req.query.username === "Max" && req.query.password === "123") {
+  console.log("3")
+
     req.session.user = "Max";
     req.session.admin = true;
-    res.sendFile(__dirname+"/login.html");
+    
+      res.sendFile(__dirname+"/logedin.html");
+      
+  
     
   }
 });
@@ -44,3 +54,4 @@ app.get('/index', auth, function (req, res) {
 app.listen(3000);
 app.use(express.static("public"))
 console.log("app running at http://localhost:3000");
+

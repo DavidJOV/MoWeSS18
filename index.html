@@ -6,22 +6,20 @@
     <title>Deutschland unsere Spieler</title>                                   <!--HEAD von VSC teils selbst erstellt -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
     <header>Deutschland unsere Spieler</header> 
     <div>
-        <form>
-                User: <input type="text" name="uname"><br>
-                PW: <input type="text" name="pw"><br>
-                <input type="submit" value="Submit">
-        </form>
+        <button type="button" onclick="logout()">Logout</button>
             
         </div>
 
     <div>
 <div class=spieler>
-    
+    <button id="clickMe" type="button" onclick="ajax()">Erzähl mir einen Witz</button>
+
+<p id="witz"></p>
 <figure>
     <figcaption>Portrait</figcaption>
 <img src= "Thomas-Muller.jpg" alt="Smiley face" id="spielerbild">
